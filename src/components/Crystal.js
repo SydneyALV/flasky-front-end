@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Crystal.css'
 
-const Crystal = (props) => {
+const Crystal = ({ name, color, powers}) => {
+    const [chargeCount, setCharge] = React.useState(0)
+    
     return (
         <section>
-            <h3>{props.name}</h3>
-            <p>{props.color}</p>
-            <p>{props.powers}</p>
-            <button>Charge Crystal</button>
+            <h3>{name}</h3>
+            <p>{color}</p>
+            <p>{powers}</p>
+            <button onClick={(e) => {
+                setCharge(chargeCount + 1)
+            }}>Charge Crystal</button>
+            <p id="charge-amount">Your {name} crystal has been charged {chargeCount} times.</p>
         </section>
     )
 }
@@ -17,4 +23,5 @@ Crystal.propTypes = {
     color: PropTypes.string.isRequired,
     powers: PropTypes.string.isRequired
 }
+
 export default Crystal;

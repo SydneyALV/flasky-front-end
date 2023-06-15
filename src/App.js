@@ -7,7 +7,7 @@ const crystalData = [
     id: 1,
     name: "Amethyst",
     color: "Purple",
-    powers: "Infinite knowledge and wisom"
+    powers: "Infinite knowledge and wisdom"
   },
   {
     id: 2,
@@ -29,8 +29,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{title}</h1>
-      <CrystalList crystals={crystalData}/>
+      <header>
+        <h1>{title}</h1>
+      </header>
+      <main>
+        <CrystalList crystals={crystalData}/>
+      </main>
     </div>
   );
 }
