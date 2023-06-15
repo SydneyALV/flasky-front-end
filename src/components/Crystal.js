@@ -3,16 +3,17 @@ import PropTypes from 'prop-types';
 import './Crystal.css'
 
 const Crystal = ({ name, color, powers}) => {
-    const [chargeCount, setCharge] = React.useState(0)
-    
+    const [chargeCount, setChargeCount] = React.useState(0)
+    const increaseCharge = () => {
+        setChargeCount(chargeCount + 1)
+    }
+
     return (
         <section>
             <h3>{name}</h3>
             <p>{color}</p>
             <p>{powers}</p>
-            <button onClick={(e) => {
-                setCharge(chargeCount + 1)
-            }}>Charge Crystal</button>
+            <button onClick={increaseCharge}>Charge Crystal</button>
             <p id="charge-amount">Your {name} crystal has been charged {chargeCount} times.</p>
         </section>
     )
