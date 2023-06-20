@@ -2,3 +2,16 @@ button {
     border-color: purple;
     color: purple
 }
+
+#crystal {
+    padding: 10px;
+    border: 2px blueviolet dashed;
+    height: 300px;
+    max-height: 100%;
+    margin: 5px;
+    width: 250px;
+}
+
+#crystal h3 {
+    color: purple
+}
