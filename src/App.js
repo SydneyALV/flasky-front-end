@@ -3,6 +3,7 @@ import './App.css';
 import CrystalList from './components/CrystalList.js'
 import React from 'react'
 import axios from 'axios'
+import CrystalForm from './components/CrystalForm';
 
 const crystalData = [
   {
@@ -79,8 +80,12 @@ function App() {
         <h1>{title}</h1>
         <p>Total Charges: {totalCharges()}</p>
       </header>
+        <CrystalForm />
       <main>
-        <CrystalList crystals={crystals} removeCrystal={removeCrystal} increaseCharge={increaseCharge} />
+        <CrystalList 
+        crystals={crystals} 
+        removeCrystal={removeCrystal} 
+        increaseCharge={increaseCharge} />
       </main>
     </div>
   );
